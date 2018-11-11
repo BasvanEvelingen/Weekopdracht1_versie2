@@ -1,0 +1,275 @@
+/* Globale CSS variabelen */
+:root
+{
+  --backgroundcolor: #FAFAFA;
+  --frontcolor: #333333;
+  --bordercolor: #CCCCCC;
+  --backdarkercolor: #EFEFEF;
+  --hovercolor: #FF7400;
+}
+
+/* Hoort eigenlijk default te zijn, breedte en hoogte van elementen bevatten padding en border zo, veel beter */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* Grid wrapper */
+.wrapper {
+  display: grid;
+  grid-template: auto 1fr minmax(1rem, auto) auto/100%;
+  /* de hoogte van de viewport. */
+  min-height: 100vh;
+}
+/* Media queries op breedte 720 (gebaseerd op 18px fontgrootte) */
+@media (min-width: 40rem) {
+  .wrapper {
+    grid-template: 5rem 1fr auto/1fr repeat(6, minmax(auto, 10rem)) 1fr;
+  }
+}
+
+/*  ------------ GRIDITEM HEADER ---------------- */
+.header {
+  order: 1;
+
+}
+@media (min-width: 40rem) {
+  .header {
+    grid-column: span 8;
+  }
+}
+
+.headerInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--backgroundcolor);
+  border-bottom: 1px solid var(--bordercolor);
+}
+@media (min-width: 40rem) {
+  .headerInner {
+    flex-direction: row;
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+}
+
+.logoLink {
+  display: block;
+
+}
+.logoLink:hover {
+  opacity: .7;
+}
+
+.logoImage {
+  position: relative;
+  display: block;
+  height: 5rem;
+  
+  
+
+}
+/*  ------------ NAVIGATIE IN HEADER ---------------- */
+.nav {
+  margin-top: 1rem;
+}
+@media (min-width: 40rem) {
+  .nav {
+    margin-top: 0;
+    margin-left: auto;
+  }
+}
+
+.navLink {
+  display: inline-block;
+  color: var(--frontcolor);
+  padding: .5rem .75rem;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  background-color: var(--backdarkercolor);
+  color: var(--hovercolor);
+}
+
+/* Onderlijntje van links */
+.onderlijn_effect {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.onderlijn_effect:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: var(--hovercolor);
+  height: 3px;
+  transition-property: right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.onderlijn_effect:hover:before, .onderlijn_effect:focus:before, .onderlijn_effect:active:before {
+  right: 0;
+}
+/*  ------------ GRIDITEM HOOFD INHOUD ---------------- */
+.main {
+  order: 2;
+  padding: 1rem;
+  background-color: var(--backgroundcolor);
+}
+@media (min-width: 40rem) {
+  .main {
+    order: 3;
+    grid-column: 3/9;
+    padding: 2rem;
+    border-right: 1px solid var(--bordercolor);
+    border-bottom: 1px solid var(--bordercolor);
+  }
+}
+
+/*  ------------ GRIDITEM SIDEBAR ---------------- */
+.aside {
+  order: 3;
+  padding: 1rem;
+  background-color: var(--backgroundcolor);
+  border-top: 1px solid var(--bordercolor);
+  border-bottom: 1px solid var(--bordercolor);
+}
+@media (min-width: 40rem) {
+  .aside {
+    order: 2;
+    grid-column: 1/3;
+    border-top: 0;
+    border-right: 1px solid var(--bordercolor);
+  }
+}
+
+
+/*  ------------ GRIDITEM FOOTER---------------- */
+
+.footer {
+  order: 4;
+  padding: 1rem;
+  background-color: var(--backgroundcolor);
+  height: 9rem;
+  margin: auto;
+}
+@media (min-width: 40rem) {
+  .footer {
+    grid-column: span 8;
+    height: 3.4rem;
+  }
+}
+
+.icon {
+  padding-bottom: 0.5rem;
+  display: block;
+  height: 2.4rem;
+  transition: all 0.4s ease-in-out;
+  filter: grayscale(100%);
+}
+
+.icon:hover {
+  filter: grayscale(0%);
+}
+
+.footer_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 2.4rem);
+  grid-gap: 4rem;
+}
+
+@media (min-width: 40rem) {
+  .footer_wrapper {
+    grid-template-columns: repeat(9, 2.4rem);
+     grid-gap: 4rem;
+  }
+}
+
+/*  ------------ STANDAARD COMPONENTEN EN ELEMENTEN ---------------- */
+
+html {
+  font-size: 18px;
+  font-family: Raleway, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: var(--frontcolor);
+  background-color: var(--backgroundcolor);
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.8;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-family: Bitter, Helvetica, Arial, sans-serif;
+}
+
+.buttons {
+  margin-top: 1rem;
+}
+
+.button {
+  background-color: var(--backdarkercolor);
+  border: 1px solid var(--bordercolor);
+  color: var(--frontcolor);
+  padding: .5rem .75rem;
+  display: inline-block;
+}
+.button:hover {
+  background-color: var(--hovercolor);
+  color: var(--backgroundcolor);
+}
+
+/*-------- LOADER FOR AJAX ----------- */
+.loader {
+  border: 8px solid var(--backdarkercolor);
+  border-radius: 50%;
+  border-top: 8px solid var(--bordercolor);
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ---------- DECORATION --------- */
+
+.slogan {
+  font-family: "Bree Serif", Helvetica, Arial, sans-serif;
+  padding-left:2em;
+}
+
+/* ---------- CODE ------------- */
+code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background: #F1F1F1;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px; }
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre; 
+}

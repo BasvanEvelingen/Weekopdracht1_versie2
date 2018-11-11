@@ -1,0 +1,9 @@
+.foto {
+    width: 200px;
+    filter: grayscale(100%);
+    transition: all 0.9s ease-in-out;
+}
+
+.foto:hover {
+    filter: grayscale(0%);
+}

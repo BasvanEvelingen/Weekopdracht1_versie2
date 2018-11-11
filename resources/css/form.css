@@ -1,0 +1,62 @@
+/* Globale CSS variabelen */
+:root
+{
+  --backgroundcolor: #FAFAFA;
+  --frontcolor: #333333;
+  --bordercolor: #CCCCCC;
+  --backdarkestcolor: #9E9E9E;
+  --backdarkercolor: #EFEFEF;
+  --hovercolor: #FF7400;
+}
+
+/* Algemene styleattributen contactformulier */
+.contactform {
+    font-family: 'Raleway', sans-serif;
+    color: var(--frontcolor);
+    border: 1px solid var(--backdarkestcolor);
+    background-color: var(--backdarkercolor);
+    padding: 5px;
+    /* grid om labels en inputs netjes naast elkaar te zetten */
+    display: grid;
+    grid-template-columns: 6rem 30rem;
+    grid-gap: 0.2rem;
+} 
+
+/* label voor elementen uitlijnen naar rechts */
+.contactform label {
+    text-align: left;
+    vertical-align: middle;
+    padding-top: 0.5rem;
+}
+
+.contactform label::after {
+    content: ":";
+}
+
+/* Input elementen van contactformulier */
+input[type=text],input[type=email], textarea {
+    font-family: 'Raleway',helvetica, Arial, sans-serif;
+    width: 100%; 
+    height: 2.5rem;
+    padding-bottom: 0.2rem;
+    border: 1px inset var(--backdarkercolor); 
+    border-radius: 1px; 
+    box-sizing: border-box; 
+    margin-top: 0.2em; 
+    resize: vertical;
+}
+
+/* Submit button van contactformulier */
+input[type=submit] {
+    background-color: var(--backdarkestcolor);
+    color: var(--frontcolor);
+    padding: 0.5rem 0.5rem;
+    border: solid 1px var(--backdarkercolor);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: var(--hovercolor);
+    color: var(--backgroundcolor);
+}

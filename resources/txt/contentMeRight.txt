@@ -1,0 +1,3 @@
+Deze site maakt gebruik van allerlei technieken, die ik geleerd heb bij de eerste week van de opleiding bij CodeGorilla.
+De layout van de site is een <code>grid</code>layout, na ook gebruik te maken van <code>float</code>s en <code>flex</code>boxen, kwam ik achter deze techniek en deze komt het dichtst in de buurt van een 
+ideale vorm van weblayout. Verder is er naast de gebruikelijke HTML en CSS ook nog Javascript en PHP gebruikt, de laatste voor de contact functie.
