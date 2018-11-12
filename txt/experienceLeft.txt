@@ -1,0 +1,3 @@
+ Mijn ervaring. <br>
+  <img class="foto" src="resources/img/foto.jpg" />
+

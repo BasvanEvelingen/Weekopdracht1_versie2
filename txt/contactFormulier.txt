@@ -1,0 +1,15 @@
+<div>
+  <form action="resources/php/contact-form.php" method="post">
+    <div class="contactform">
+      <label>Naam</label>
+      <input type="text" name="name" placeholder="Uw naam">
+      <label>Email</label>
+      <input type="email" name="email" placeholder="Uw email">
+      <label>Onderwerp</label>
+      <input type="text" name="subject" placeholder="Onderwerp">
+      <label>Bericht</label>
+      <textarea name="message" placeholder="Schrijf iets"></textarea>
+      <input type="submit" value="Sturen">
+    </div>
+  </form>
+</div>

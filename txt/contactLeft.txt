@@ -1,0 +1,3 @@
+ Laat uw gegevens achter op het formulier hiernaast, ik zal zo snel mogelijk contact met u opnemen, met vriendelijke groet Bas. <br>
+  <img class="foto" src="resources/img/foto.jpg" />
+

@@ -1,0 +1,17 @@
+Voorbeeld van projecten
+<br>
+project 1
+<br>
+<img class="foto" src="resources/img/coder.png" />
+<br>
+project2
+<br>
+<img class="foto" src="resources/img/coderphone.jpg" />
+<br>
+project 3
+<br>
+<img class="foto" src="resources/img/keyboard.jpg" />
+<br>
+project 4
+<br>
+<img class="foto" src="resources/img/programmer.jpg" />

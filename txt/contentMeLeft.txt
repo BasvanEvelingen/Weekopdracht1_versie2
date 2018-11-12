@@ -1,0 +1,3 @@
+ Welkom op mijn portfoliosite, deze site zal ik constant updaten met de opdrachten
+ die ik krijg als trainee bij de bootcamp van CodeGorilla. <br>
+  <img class="foto" src="resources/img/foto.jpg" />
