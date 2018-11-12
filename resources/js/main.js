@@ -32,20 +32,16 @@ function loadText(target, textfile) {
 function navSelect(str) {
     switch (str) {
         case "me":
-        loadText("idAside","contentMeLeft.txt");
-        loadText("idMain","contentMeRight.txt");
+        loadText("idAside","contentMeLeft.txt","idMain","contentMeRight.txt");
         break;
         case "portfolio":
-        loadText("idAside","portfolioLeft.txt");
-        loadText("idMain","portfolioRight.txt");
+        loadText("idAside","portfolioLeft.txt","idMain","portfolioRight.txt");
         break;
         case "experience":
-        loadText("idAside","experienceLeft.txt");
-        loadText("idMain","experienceRight.txt")
+        loadText("idAside","experienceLeft.txt","idMain","experienceRight.txt");
         break;
         case "contact":
-        loadText("idAside","contactLeft.txt");
-        loadText("idMain","contactFormulier.txt")
+        loadText("idAside","contactLeft.txt","idMain","contactFormulier.txt");
         break;
     }
 }
